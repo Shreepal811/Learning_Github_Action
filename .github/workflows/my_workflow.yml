@@ -1,5 +1,10 @@
 name: "Event info workflow"
-on: push
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: "*/7 * * * *" 
+
 jobs:
   event-info-job:
     runs-on: ubuntu-latest
