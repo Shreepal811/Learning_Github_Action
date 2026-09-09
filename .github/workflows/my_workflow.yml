@@ -1,18 +1,11 @@
-name: first workflow 
+name: "Event info workflow"
 on: push
 jobs:
-  job1: 
+  event-info-job:
     runs-on: ubuntu-latest
     steps:
-    - name: Step 1
-      run: echo "hello from step 1"
-    - name: Step 2
-      run: echo "hello from step 2"
-
-  job2:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Step 3
-      run: echo "hello from final step"
+    - name:  "finding the event"
+      run: echo "the event is ${{ github.event_name }}"
+      
         
          
